@@ -10,9 +10,9 @@ const Home = () => {
   const history = useHistory();
 
   const handleAddToCart = (product) => {
-    dispatch(addToCart(product))
+    dispatch(addToCart(product));
     history.push('/cart');
-  }
+  };
 
   return (
     <div className="home-container">
@@ -32,7 +32,9 @@ const Home = () => {
                   <span>{product.desc}</span>
                   <span className="price">${product.price}</span>
                 </div>
-                <button onClick={()=> handleAddToCart(product)}>Add To Cart</button>
+                <button onClick={() => handleAddToCart(product)}>
+                  Add To Cart
+                </button>
               </div>
             ))}
           </div>
